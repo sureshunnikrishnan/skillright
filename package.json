@@ -1,0 +1,26 @@
+{
+  "name": "skillright",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Skillright monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @skillright/backend && npm run build -w @skillright/cli && npm run build -w @skillright/web",
+    "start": "npm run start -w @skillright/cli",
+    "skillright": "npm run start -w @skillright/cli",
+    "pipeline": "npm run start -w @skillright/backend",
+    "web": "npm run dev -w @skillright/web",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true
+  }
+}

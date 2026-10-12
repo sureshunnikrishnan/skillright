@@ -1,0 +1,15 @@
+---
+description: Application source lives in each package's src/ directory
+alwaysApply: true
+---
+
+# Source layout
+
+- This is an npm workspaces monorepo. Packages live under `packages/`.
+- Put all application source (TypeScript/JavaScript and app modules) under each package's `src/` directory (for example `packages/backend/src/`).
+- Do not add application source files at the repo root or a package root.
+- Shared TypeScript options live in the repo-root `tsconfig.base.json`. Package `tsconfig.json` files extend it.
+- Workspace and tooling config stay at the repo root (`package.json`, lockfile, `.gitignore`).
+- Package-specific config (`package.json`, `tsconfig.json`, `.env.example`) stays in that package.
+- Compiled output goes to each package's `dist/`.
+- Import paths and scripts in a package should assume that package's `src/` is the source root.

@@ -1,0 +1,26 @@
+{
+  "name": "@skillright/cli",
+  "version": "1.0.0",
+  "description": "CLI to manage the Skillright local skills registry",
+  "type": "module",
+  "bin": {
+    "skillright": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@skillright/backend": "*",
+    "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
